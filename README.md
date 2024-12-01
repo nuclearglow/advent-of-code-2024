@@ -16,3 +16,9 @@ npm ci
 ```shell
 npm run dev -- src/2024-1.ts
 ```
+
+## Links
+
+- [Advent of Code 2024](https://adventofcode.com/2024)
+- [lodash docs](https://lodash.com/docs/#unzip)
+- [tsc](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
