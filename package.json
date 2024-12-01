@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "dev": "tsx watch",
-    "build": "tsc --clean --build"
+    "dev": "tsx watch"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",

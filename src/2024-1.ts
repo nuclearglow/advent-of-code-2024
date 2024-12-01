@@ -7,11 +7,7 @@ const [left, right] = unzip(
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => !isEmpty(line))
-    .map((line) => {
-      const [left, right] = line.split(/\s+/);
-
-      return [Number.parseInt(left), Number.parseInt(right)];
-    })
+    .map((line) => line.split(/\s+/).map(Number))
     .filter((line) => !isEmpty(line)),
 );
 
