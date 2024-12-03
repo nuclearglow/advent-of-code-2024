@@ -17,7 +17,7 @@ npm ci
 npm run dev -- src/2024-1.ts
 ```
 
-## Performance (using ` performance.now() for both parts)
+## Performance (using `performance.now()` for both parts)
 
 - day 1: `9ms`
 - day 2: `10ms`
