@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { instructionsControl } from './source/2024-3-input';
 
+const startTime = performance.now();
 // extract valid instructions
 const regex = /mul\((?<x>\d+),(?<y>\d+)\)/g;
 
@@ -58,3 +59,6 @@ while (loop) {
 }
 
 console.log('branched result: ', getInstructions(cleanedInstructions));
+
+const endTime = performance.now();
+console.log('execution time: ', endTime - startTime, 'ms');

@@ -1,6 +1,8 @@
 import { isEmpty, unzip, zip } from 'lodash-es';
 import { coordinates } from './source/2024-1-input';
 
+const startTime = performance.now();
+
 // prepare left and right coordinates
 const [left, right] = unzip(
   coordinates
@@ -31,3 +33,7 @@ const similarityScore = left
   .reduce((acc, curr) => acc + curr, 0);
 
 console.log('similarityScore', similarityScore);
+
+const endTime = performance.now();
+
+console.log('execution time: ', endTime - startTime, 'ms');

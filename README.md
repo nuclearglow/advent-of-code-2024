@@ -17,6 +17,12 @@ npm ci
 npm run dev -- src/2024-1.ts
 ```
 
+## Performance (using ` performance.now() for both parts)
+
+- day 1: `9ms`
+- day 2: `10ms`
+- day 3: `1.6ms`
+
 ## Links
 
 - [Advent of Code 2024](https://adventofcode.com/2024)

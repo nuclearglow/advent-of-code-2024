@@ -1,6 +1,7 @@
 import { isEmpty } from 'lodash-es';
 import { reportsInput } from './source/2024-2-input';
 
+const startTime = performance.now();
 // preprocess reports
 const reports = reportsInput
   .split('\n')
@@ -43,3 +44,7 @@ const safetyWithDampener = reports
   .filter(Boolean).length;
 
 console.log('safetyWithDampener', safetyWithDampener);
+
+const endTime = performance.now();
+
+console.log('execution time: ', endTime - startTime, 'ms');
