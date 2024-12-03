@@ -2,14 +2,13 @@ import { isEmpty } from 'lodash-es';
 import { reportsInput } from './source/2024-2-input';
 
 const startTime = performance.now();
+
 // preprocess reports
 const reports = reportsInput
   .split('\n')
   .map((line) => line.trim())
   .filter((line) => !isEmpty(line))
   .map((line) => line.split(' ').map(Number));
-
-// console.log('levels', reports);
 
 /**
  * Get the differences between levels in a report

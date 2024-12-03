@@ -3,18 +3,21 @@ import path from 'node:path';
 import { instructionsControl } from './source/2024-3-input';
 
 const startTime = performance.now();
-// extract valid instructions
+
+// match a valid mul instruction
 const regex = /mul\((?<x>\d+),(?<y>\d+)\)/g;
 
+// load the input from disk, ts chokes when copied to a variable
 const instructionsPath = path.resolve(path.join(__dirname, 'source', '2024-3-input.txt'));
 const instructions = fs.readFileSync(instructionsPath, 'utf-8');
 
+// extract valid instructions
 function getInstructions(instructions: string): number {
   const matches = [...instructions.matchAll(regex)];
 
   return matches
     .flatMap((match) => {
-      const { x, y } = match.groups as { x: string; y: string };
+      const { x, y } = match.groups as { x?: string; y?: string };
 
       if (!x || !y) {
         return [];
@@ -39,10 +42,10 @@ console.log('result: ', getInstructions(instructions));
 let cleanedInstructions = instructions;
 let loop = true;
 
-while (loop) {
-  const start = "don't()";
-  const end = 'do()';
+const start = "don't()";
+const end = 'do()';
 
+while (loop) {
   // find the string indices of the next markers
   const dontIndex = cleanedInstructions.indexOf(start);
   let doIndex = cleanedInstructions.indexOf(end, dontIndex);
