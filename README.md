@@ -9,7 +9,7 @@ npm ci
 ## Organization
 
 - `src/` holds the scripts for the challenges, one for each day
-- `src/input` holds the inputs for the challenge, one for each day. The file might have two entries, one for the control input given as an exercise
+- `src/input` holds the inputs for the challenge. Also includes the example input from the challenge.
 
 ## Run a day
 
