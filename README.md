@@ -22,6 +22,7 @@ npm run dev -- src/2024-1.ts
 - day 1: `9ms`
 - day 2: `10ms`
 - day 3: `1.6ms`
+- day 4: `17ms`
 
 ## Links
 
